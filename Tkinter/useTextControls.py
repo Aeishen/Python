@@ -26,19 +26,19 @@ from tkinter import *
 # root.mainloop()
 
 #   方法二：利用textvariable变量属性来实现文本变化。
-# def getTime():
-#     var.set(time.strftime("%H:%M:%S"))  # 获取当前时间
-#     root.after(1000, getTime)  # 每隔1s调用函数 gettime 自身获取时间
-#
-#
-# root = Tk()
-# root.title('时钟')
-# var = StringVar()
-#
-# lb = Label(root, textvariable=var, fg='blue', font=("黑体", 80))
-# lb.pack()
-# getTime()
-# root.mainloop()
+def getTime():
+    var.set(time.strftime("%H:%M:%S"))  # 获取当前时间
+    root.after(1000, getTime)  # 每隔1s调用函数 gettime 自身获取时间
+
+
+root = Tk()
+root.title('时钟')
+var = StringVar()
+
+lb = Label(root, textvariable=var, fg='blue', font=("黑体", 80))
+lb.pack()
+getTime()
+root.mainloop()
 
 # 2.文本框（Text）
 # 常用方法如下：(下表位置的取值可为整数，浮点数或END（末尾），例如0.0表示第0列第0行)
@@ -72,19 +72,19 @@ from tkinter import *
 # 方法	                    功能
 # get()                     取值方法
 # delete(起始位置，终止位置)  用于删除文本的（例如：清空输入框为delete(0，END)）
-root = Tk()
-root.geometry('320x240')
-entry = Entry(root)
-entry.pack()
-
-
-def getEntry():
-    var.set(entry.get())
-    root.after(100, getEntry)
-
-
-var = StringVar()
-lb = Label(root, textvariable=var, fg='blue', font=("黑体", 80))
-lb.pack()
-getEntry()
-root.mainloop()
+# root = Tk()
+# root.geometry('320x240')
+# entry = Entry(root)
+# entry.pack()
+#
+#
+# def getEntry():
+#     var.set(entry.get())
+#     root.after(100, getEntry)
+#
+#
+# var = StringVar()
+# lb = Label(root, textvariable=var, fg='blue', font=("黑体", 80))
+# lb.pack()
+# getEntry()
+# root.mainloop()
